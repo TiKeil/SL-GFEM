@@ -1,0 +1,79 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{mediumpurple148103189}{RGB}{148,103,189}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.91,0.5)},
+  anchor=east,
+  draw=lightgray204
+},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+title={rel\_l2-error for \(\displaystyle n_h\)=1024 and \(\displaystyle n_H\)=32},
+x grid style={darkgray176},
+xlabel={\(\displaystyle \ell\)},
+xmajorgrids,
+xmin=0.85, xmax=4.15,
+xtick style={color=black},
+y grid style={darkgray176},
+ymajorgrids,
+ymin=5.67665397172455e-05, ymax=0.451611734536809,
+ymode=log,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=o, mark size=1, mark options={solid,fill opacity=0}]
+table {%
+1 0.0525201280230027
+2 0.033875616759344
+3 0.027026017975347
+4 0.0251095807765029
+};
+\addlegendentry{PUM-1 with n=10, p=0}
+\addplot [semithick, darkorange25512714, mark=o, mark size=1.5, mark options={solid,fill opacity=0}]
+table {%
+1 0.00752581705501369
+2 0.000694393533300051
+3 0.000330724128541865
+4 0.000258688378694927
+};
+\addlegendentry{PUM-1 with n=20, p=0}
+\addplot [semithick, forestgreen4416044, mark=o, mark size=2, mark options={solid,fill opacity=0}]
+table {%
+1 0.00752581705501369
+2 0.000108745098432189
+3 8.84835883940197e-05
+4 8.69685074167893e-05
+};
+\addlegendentry{PUM-1 with n=30, p=0}
+\addplot [semithick, crimson2143940, mark=o, mark size=2.5, mark options={solid,fill opacity=0}]
+table {%
+1 0.00752581705501369
+2 9.76035840541799e-05
+3 8.5440038748837e-05
+4 8.53877816623004e-05
+};
+\addlegendentry{PUM-1 with n=40, p=0}
+\addplot [semithick, mediumpurple148103189, mark=*, mark size=2, mark options={solid,fill=black}]
+table {%
+1 0.0706992548825298
+2 0.0353677816588315
+3 0.034802021021491
+4 0.300235407997216
+};
+\addlegendentry{SLOD}
+\end{axis}
+
+\end{tikzpicture}

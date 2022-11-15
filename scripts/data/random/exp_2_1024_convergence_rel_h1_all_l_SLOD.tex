@@ -1,0 +1,54 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=lightgray204},
+log basis x={2},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+title={rel\_h1-error for \(\displaystyle n_h\)=1024},
+x grid style={darkgray176},
+xlabel={\(\displaystyle 1/H\)},
+xmajorgrids,
+xmin=3.60500185044332, xmax=35.506223106171,
+xmode=log,
+xtick style={color=black},
+y grid style={darkgray176},
+ymajorgrids,
+ymin=6.7064228543726e-05, ymax=0.0782858841085189,
+ymode=log,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=*, mark size=2.5, mark options={solid,fill=black}]
+table {%
+4 0.0567891826970617
+8 0.00769621545280919
+16 0.00342894278107902
+32 0.0134697589331106
+};
+\addlegendentry{SLOD with l=1}
+\addplot [semithick, darkorange25512714, mark=*, mark size=3, mark options={solid,fill=black}]
+table {%
+8 0.00696953322271814
+16 0.000758522364649942
+32 0.000105654682245826
+};
+\addlegendentry{SLOD with l=2}
+\addplot [semithick, forestgreen4416044, mark=*, mark size=3.5, mark options={solid,fill=black}]
+table {%
+8 0.00696918856835528
+16 0.000758193905837634
+32 9.24503959074061e-05
+};
+\addlegendentry{SLOD with l=3}
+\end{axis}
+
+\end{tikzpicture}

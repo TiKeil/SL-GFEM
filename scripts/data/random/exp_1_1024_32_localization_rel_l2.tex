@@ -1,0 +1,106 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{gray127}{RGB}{127,127,127}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{mediumpurple148103189}{RGB}{148,103,189}
+\definecolor{orchid227119194}{RGB}{227,119,194}
+\definecolor{sienna1408675}{RGB}{140,86,75}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.03)},
+  anchor=south west,
+  draw=lightgray204
+},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+title={rel\_l2-error for \(\displaystyle n_h\)=1024 and \(\displaystyle n_H\)=32},
+x grid style={darkgray176},
+xlabel={\(\displaystyle \ell\)},
+xmajorgrids,
+xmin=0.85, xmax=4.15,
+xtick style={color=black},
+y grid style={darkgray176},
+ymajorgrids,
+ymin=9.81454870720445e-10, ymax=0.0913856561242519,
+ymode=log,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=o, mark size=1, mark options={solid,fill opacity=0}]
+table {%
+1 0.0209052952268037
+2 0.00828340151109635
+3 0.00493055865467332
+4 0.00354783636954173
+};
+\addlegendentry{PUM-1, $n=10$, $p=0$, $n_c=10882$}
+\addplot [semithick, darkorange25512714, mark=o, mark size=1.5, mark options={solid,fill opacity=0}]
+table {%
+1 0.000218296299770366
+2 6.46209934497116e-05
+3 4.39931280500158e-05
+4 3.58170315032037e-05
+};
+\addlegendentry{PUM-1, $n=15$, $p=0$, $n_c=16284$}
+\addplot [semithick, forestgreen4416044, mark=o, mark size=2, mark options={solid,fill opacity=0}]
+table {%
+1 0.000160102681391797
+2 1.54719212957862e-05
+3 1.00147308079422e-05
+4 7.8676464133942e-06
+};
+\addlegendentry{PUM-1, $n=20$, $p=0$, $n_c=21289$}
+\addplot [semithick, crimson2143940, mark=o, mark size=2.5, mark options={solid,fill opacity=0}]
+table {%
+1 0.000160102681391797
+2 2.49573278503069e-07
+3 1.30015636047078e-07
+4 9.64068497477391e-08
+};
+\addlegendentry{PUM-1, $n=30$, $p=0$, $n_c=30160$}
+\addplot [semithick, mediumpurple148103189, mark=o, mark size=3, mark options={solid,fill opacity=0}]
+table {%
+1 0.000160102681391797
+2 2.09670955832907e-08
+3 5.06091381779365e-09
+4 3.55789556389206e-09
+};
+\addlegendentry{PUM-1, $n=40$, $p=0$, $n_c=33780$}
+\addplot [semithick, sienna1408675, mark=o, mark size=3.5, mark options={solid,fill opacity=0}]
+table {%
+1 0.000160102681391797
+2 2.09670955832907e-08
+3 5.06091381779365e-09
+4 3.55789556389206e-09
+};
+\addlegendentry{PUM-1, $n=max$, $p=0$, $n_c=33780$}
+\addplot [semithick, orchid227119194, mark=o, mark size=4, mark options={solid,fill opacity=0}]
+table {%
+1 0.000160102681391797
+2 4.63694631024348e-05
+3 3.103938047948e-05
+4 2.51375982243436e-05
+};
+\addlegendentry{PUM-1, $n=adaptive$, $p=0$, $n_c=15879$}
+\addplot [semithick, gray127, mark=*, mark size=2, mark options={solid,fill=black}]
+table {%
+1 0.0396871955973702
+2 9.8888803424383e-05
+3 1.08496962483599e-06
+4 2.25994545512997e-09
+};
+\addlegendentry{SLOD}
+\end{axis}
+
+\end{tikzpicture}
