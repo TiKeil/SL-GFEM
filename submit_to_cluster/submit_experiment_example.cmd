@@ -1,17 +1,17 @@
 #!/bin/bash
  
 #SBATCH --nodes=4                   # the number of nodes you want to reserve
-#SBATCH --ntasks-per-node=4
-#SBATCH --mem-per-cpu=5000
-#SBATCH --partition=express          # on which partition to submit the job
-#SBATCH --time=2:00:00             # the max wallclock time (time limit your job will run)
+#SBATCH --ntasks-per-node=20
+#SBATCH --mem-per-cpu=4000
+#SBATCH --partition=normal          # on which partition to submit the job
+#SBATCH --time=10:00:00             # the max wallclock time (time limit your job will run)
  
 #SBATCH --job-name=test_pumslod_exp1     # the name of your job
 #SBATCH --mail-type=ALL             # receive an email when your job starts, finishes normally or is aborted
 #SBATCH --mail-user=t_keil02@uni-muenster.de # your mail address
 
 # output file
-#SBATCH --output /scratch/tmp/t_keil02/pumslod/experiment_1.dat
+#SBATCH --output /scratch/tmp/t_keil02/slgfem/experiment_1.dat
 
 # load modules
 module add palma/2019a
@@ -30,7 +30,7 @@ export OMPI_MCA_mpi_warn_on_fork=0
 sleep 1
 
 echo "Launching job:"
-srun python -u /home/t/t_keil02/PUMSLOD/scripts/main_experiment_1.py /home/t/t_keil02/PUMSLOD/scripts/ /scratch/tmp/t_keil02/pumslod/mpi_storage/exp1
+srun python -u /home/t/t_keil02/SL-GFEM/scripts/main_experiment_1.py /home/t/t_keil02/SL-GFEM/scripts/ /scratch/tmp/t_keil02/slgfem/mpi_storage/exp1
 
 if [ $? -eq 0 ]
 then
