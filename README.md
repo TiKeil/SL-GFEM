@@ -18,7 +18,7 @@
 
 In this repository, we provide the code for the numerical experiments in Section 7 of the paper
 "A super-localized generalized finite element method" by Philip Freese, Moritz Hauck, Tim Keil, and Daniel Peterseim.
-The preprint is available [here](https://arxiv.org/abs/tba).
+The preprint is available [here](https://arxiv.org/abs/2211.09461).
 
 If you want to have a closer look at the implementation or generate the results by yourself, we provide simple setup
 instructions for configuring your own `python` environment.
